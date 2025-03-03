@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: Default
+pool: testpool1
   
 variables:
   solution: '**/*.sln'
