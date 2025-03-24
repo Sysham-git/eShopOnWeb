@@ -32,9 +32,7 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: DownloadBuildArtifacts@1
+- task: DownloadPipelineArtifact@2
   inputs:
     buildType: 'current'
-    downloadType: 'single'
-    artifactName: 'New Build Artifact'
-    downloadPath: '$(System.ArtifactsDirectory)'
+    targetPath: '$(Pipeline.Workspace)'
